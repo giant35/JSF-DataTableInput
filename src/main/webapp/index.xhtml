@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Hello from Facelets
+            <br />
+            <h:link outcome="welcomePrimefaces" value="Primefaces 欢迎使用页" />
+            <p:dataTable value="#{c.list}" var="row">
+                <p:column headerText="skuId">
+                    <p:inputText value="#{row.skuId}"/>
+                </p:column>
+                <p:column headerText="quantity">
+                    <p:inputText value="#{row.quantity}"/>
+                </p:column>
+            </p:dataTable>
+            <p:commandButton action="#{c.save()}" value="保存" />
+        </h:form>
+    </h:body>
+</html>
+
